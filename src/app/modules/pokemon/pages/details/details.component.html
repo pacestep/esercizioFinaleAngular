@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center align-items-center vh-100 bg-pik">
+  <div class="bg card" style="width: 45rem; height: auto">
+    <div class="container d-flex flex-column align-items-center mb-5">
+      <div class="d-flex justify-content-between w-100">
+        <h3 class="card-title mt-3">{{ pokemonDetails?.name | titlecase }}</h3>
+        <button class="btn btn-warning btn-sm text-white m-3" (click)="return()">Indietro</button>
+      </div>
+      
+
+      <div class="d-flex justify-content-between mt-5 w-75">
+        <div><img src="{{ pokemonDetails?.sprites?.front_default }}" /></div>
+        
+        <div>
+          <h5>Statistiche</h5>
+        </div>
+        <div>
+            <h5>Mosse</h5>
+            <p *ngFor="let move of moves">{{move.move.name}}</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>

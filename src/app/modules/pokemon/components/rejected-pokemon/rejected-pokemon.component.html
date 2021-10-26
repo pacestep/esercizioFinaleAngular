@@ -1,0 +1,9 @@
+<div class="container">
+  <h5 class="mt-2">Pokemon rifiutati: {{pokemonList.length}}</h5>
+  <ul>
+    <li class="d-flex align-items-center" *ngFor="let pokemon of pokemonList" (click)="navigateToDetails(pokemon.id)">
+      <img src="{{ pokemon?.sprites?.front_default }}"/>
+      <p>#{{ pokemon.id }}  {{ pokemon.name| titlecase}}</p>
+    </li>
+  </ul>
+</div>

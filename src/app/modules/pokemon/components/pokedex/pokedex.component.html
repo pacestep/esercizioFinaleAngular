@@ -1,0 +1,10 @@
+<div class="container">
+  <h5 class="mt-2 mb-4">Il tuo Pokedex:</h5>
+  <ul >
+    <li class="d-flex justify-content-around align-items-center" *ngFor="let pokemon of pokemonList" (click)="navigateToDetails(pokemon.id)">
+      <img src="{{ pokemon?.sprites?.front_default }}"/>
+      <p>{{ pokemon.name |titlecase}}</p>
+      <button class="btn btn-danger btn-sm" (click)="deletePokemon(pokemon)">X</button>
+    </li>
+  </ul>
+</div>

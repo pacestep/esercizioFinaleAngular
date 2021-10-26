@@ -1,0 +1,5 @@
+<div class="d-flex justify-content-between align-items-center vh-100 bg-pik">
+    <app-rejected-pokemon class="bg-dimension-rej" [pokemonList]="pokemonRifiutati"></app-rejected-pokemon>
+    <app-pokearea [pokemon]="currentPokemon" [pokemonCatturati]="pokemonCatturati" (selectedPokemon)="handleSelectedPokemon($event)"></app-pokearea>
+    <app-pokedex class="bg-dimension-poke" [pokemonList]="pokemonCatturati" (deletedPokemon)="deletePokemon($event)"></app-pokedex>
+</div>
