@@ -22,8 +22,8 @@ export class RejectedPokemonComponent implements OnInit {
     
   }
 
+  //Spostare a padre, coglione
   navigateToDetails(id: number) {
-    this.pokemonService.updateSubject(this.pokemonList)
     this.router.navigate(['detail', id], { relativeTo: this.activatedRoute })
   }
 

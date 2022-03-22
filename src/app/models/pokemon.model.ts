@@ -4,6 +4,7 @@ import { IIndex } from "./index.model";
 import { IMoveBundle } from "./move.model";
 import { ISpecie } from "./specie.model";
 import { ISprite } from "./sprite.model";
+import { IStats } from "./stats.model";
 import { IType } from "./type.model";
 
 
@@ -24,7 +25,9 @@ export interface IPokemon {
     species: ISpecie;
     sprites: ISprite;
     types: IType[];
+    stats: IStats[];
     weight:number;
+    action?: 'cattura' | 'rifiuta';
 }
 
 export interface ISelectedPokemon {

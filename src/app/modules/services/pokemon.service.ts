@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { IPokemon } from 'src/app/models/pokemon.model';
+import { IPokemon, ISelectedPokemon } from 'src/app/models/pokemon.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +22,17 @@ export class PokemonService {
     return this.httpClient.get<IPokemon>(`${this.apiUrl}/v2/pokemon/${id}`);
   }
 
-  updateSubject(pokemonList: IPokemon[]) {
+  saveCurrentPokemons(pokemonList: IPokemon[]) {
     this.pokemonListSubject.next(pokemonList);
+    this.setLocalStorage(pokemonList);
+  }
+
+  setLocalStorage(pokemons: IPokemon[]): void {
+    localStorage.setItem('pokemons', JSON.stringify(pokemons));
+  }
+
+  getLocalStorage(): IPokemon[] {
+    const pokemons = localStorage.getItem('pokemons');
+    return pokemons ? JSON.parse(pokemons) : [];
   }
 }

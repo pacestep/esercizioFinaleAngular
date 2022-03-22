@@ -1,4 +1,23 @@
 .bg {
-    background: rgb(37,175,177);
-    background: linear-gradient(222deg, rgba(37,175,177,1) 39%, rgba(253,229,45,1) 100%);
+  background: rgb(37, 175, 177);
+  background: linear-gradient(
+    222deg,
+    rgba(37, 175, 177, 1) 39%,
+    rgba(253, 229, 45, 1) 100%
+  );
+
+  img {
+    width: 200px;
+    height: auto;
+  }
+
+  .btn {
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  span {
+    font-weight: 600;
+  }
 }

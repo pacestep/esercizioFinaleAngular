@@ -7,6 +7,10 @@
             background: rgb(102, 167, 179);
             list-style: none;
             margin: 5px;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }

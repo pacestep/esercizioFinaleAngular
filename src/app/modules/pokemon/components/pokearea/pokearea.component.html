@@ -5,10 +5,10 @@
     <div class="d-flex justify-content-between mt-5 w-75">
       <div>
         <h5>Dettaglio</h5>
-        <p>ID: {{pokemon?.id}}</p>
-        <p>Nome: {{pokemon?.name | titlecase}}</p>
-        <p>Peso: {{pokemon?.weight}}</p>
-        <p>Altezza: {{pokemon?.height}}</p>
+        <p><span>ID: </span>{{pokemon?.id}}</p>
+        <p><span>Nome: </span>{{pokemon?.name | titlecase}}</p>
+        <p><span>Peso: </span>{{pokemon?.weight}}</p>
+        <p><span>Altezza: </span>Altezza: {{pokemon?.height}}</p>
       </div>
       <img src="{{ pokemon?.sprites?.front_default }}"/>
     </div>
